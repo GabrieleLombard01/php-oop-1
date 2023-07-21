@@ -31,6 +31,16 @@ class Movie
         $this->actors = $actors;
     }
 
+    // Metodo per ottenere informazioni sugli attori associati al film:
+    public function getActorsInfo()
+    {
+        $actorsInfo = "Attori: ";
+        foreach ($this->actors as $actor) {
+            $actorsInfo .= "{$actor->name} ({$actor->age}), ";
+        }
+        return rtrim($actorsInfo, ', '); // Rimuove l'ultima virgola e lo spazio
+    }
+
     // Metodo per ottenere informazioni sul film:
     public function getMovieInfo()
     {
