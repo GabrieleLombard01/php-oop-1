@@ -14,14 +14,22 @@ class Movie
         $this->genre = $genre;
         $this->year = $year;
     }
-
-    // Metodo per ottenere informazioni sul film::
-    public function getMovieInfo()
-    {
-        return "Titolo: {$this->title}, Genere: {$this->genre}, Anno: {$this->year}";
-    }
 }
 
+class Movie
+{
+    // Variabili d'istanza:
+    public $title;
+    public $genre;
+    public $year;
+    public $actors;
+
+    // Metodo per ottenere informazioni sul film:
+    public function getMovieInfo()
+    {
+        return "Titolo: {$this->title}, Genere: {$this->genre}, Anno: {$this->year}, " . $this->getActorsInfo();
+    }
+}
 
 // Istanziazione dei due oggetti Movie
 $movie1 = new Movie("Il Signore degli Anelli: La Compagnia dell'Anello", "Fantasy", 2001);
