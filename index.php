@@ -15,7 +15,7 @@ class Movie
         $this->year = $year;
     }
 
-    // Metodo:
+    // Metodo per ottenere informazioni sul film::
     public function getMovieInfo()
     {
         return "Titolo: {$this->title}, Genere: {$this->genre}, Anno: {$this->year}";
