@@ -38,10 +38,14 @@ class Movie
     }
 }
 
-// Istanziazione dei due oggetti Movie
-$movie1 = new Movie("Il Signore degli Anelli: La Compagnia dell'Anello", "Fantasy", 2001);
-$movie2 = new Movie("Il Signore degli Anelli: Le due torri", "Fantasy", 2002);
-$movie3 = new Movie("Il Signore degli Anelli: Il ritorno del re", "Fantasy", 2003);
+// Istanziazione degli oggetti Actor
+$actor1 = new Actor("Ian McKellen", 82);
+$actor2 = new Actor("Elijah Wood", 41);
+
+// Istanziazione degli oggetti Movie con gli attori associati
+$movie1 = new Movie("Il Signore degli Anelli: La Compagnia dell'Anello", "Fantasy", 2001, [$actor1, $actor2]);
+$movie2 = new Movie("Il Signore degli Anelli: Le due torri", "Fantasy", 2002, [$actor1, $actor2]);
+$movie3 = new Movie("Il Signore degli Anelli: Il ritorno del re", "Fantasy", 2003, [$actor1, $actor2]);
 
 // Stampa delle informazioni sugli oggetti Movie
 echo $movie1->getMovieInfo() . "<br>";
