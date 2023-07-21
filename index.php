@@ -1,18 +1,16 @@
 <?php
 
-class Movie
+class Actor
 {
     // Variabili d'istanza:
-    public $title;
-    public $genre;
-    public $year;
+    public $name;
+    public $age;
 
     // Costruttore:
-    public function __construct($title, $genre, $year)
+    public function __construct($name, $age)
     {
-        $this->title = $title;
-        $this->genre = $genre;
-        $this->year = $year;
+        $this->name = $name;
+        $this->age = $age;
     }
 }
 
@@ -23,6 +21,15 @@ class Movie
     public $genre;
     public $year;
     public $actors;
+
+    // Costruttore:
+    public function __construct($title, $genre, $year, $actors)
+    {
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->year = $year;
+        $this->actors = $actors;
+    }
 
     // Metodo per ottenere informazioni sul film:
     public function getMovieInfo()
